@@ -1,0 +1,266 @@
+###############################################################################
+#
+# IAR ELF Linker V7.20.5.7591/W32 for ARM                 19/Oct/2015  17:17:29
+# Copyright 2007-2014 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Exe\EXTI.out
+#    Map file     =  
+#        C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\List\EXTI.map
+#    Command line =  
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\main.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\startup_stm32f0xx.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0_discovery.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_exti.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_gpio.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_it.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_misc.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_rcc.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\stm32f0xx_syscfg.o"
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj\system_stm32f0xx.o"
+#        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall -o
+#        "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Exe\EXTI.out"
+#        --map "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using
+#        two buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\List\EXTI.map"
+#        --config "C:\Users\srijan\Documents\STMF0\Interrupt to dim lights
+#        using two
+#        buttons\Project\Peripheral_Examples\EXTI\EWARM\stm32f0xx_flash.icf"
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20001fff] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A1":                                      0xc0
+  .intvec            ro code  0x08000000   0xc0  startup_stm32f0xx.o [1]
+                            - 0x080000c0   0xc0
+
+"P1":                                     0x4c8
+  .text              ro code  0x080000c0   0xb4  system_stm32f0xx.o [1]
+  .text              ro code  0x08000174   0xae  I32DivModFast.o [4]
+  .text              ro code  0x08000222   0x2a  zero_init3.o [4]
+  .text              ro code  0x0800024c    0x2  IntDivZer.o [4]
+  .text              ro code  0x0800024e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000250   0x94  main.o [1]
+  .text              ro code  0x080002e4   0x18  stm32f0xx_rcc.o [1]
+  .text              ro code  0x080002fc   0x7a  stm32f0xx_gpio.o [1]
+  .text              ro code  0x08000376    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000378   0x68  stm32f0_discovery.o [1]
+  .text              ro code  0x080003e0   0x6a  stm32f0xx_it.o [1]
+  .text              ro code  0x0800044a   0x30  copy_init3.o [4]
+  .text              ro code  0x0800047a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800047c   0x28  data_init.o [4]
+  .iar.init_table    const    0x080004a4   0x24  - Linker created -
+  .text              ro code  0x080004c8   0x1a  cmain.o [4]
+  .text              ro code  0x080004e2    0x4  low_level_init.o [3]
+  .text              ro code  0x080004e6    0x8  exit.o [3]
+  .text              ro code  0x080004ee    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080004f0    0xa  cexit.o [4]
+  .text              ro code  0x080004fa    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080004fc   0x14  exit.o [5]
+  .text              ro code  0x08000510   0x10  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000520    0xc  cstartup_M.o [4]
+  .text              ro code  0x0800052c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800052e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000530    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000532    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000534    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000536    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000538    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800053a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800053c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800053e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000540    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000542    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000544    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000546    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000548    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800054a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800054c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800054e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000550    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000552    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000554    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000556    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000558    0x2  startup_stm32f0xx.o [1]
+  .rodata            const    0x0800055a    0x0  zero_init3.o [4]
+  .rodata            const    0x0800055a    0x0  copy_init3.o [4]
+  Initializer bytes  ro data  0x0800055c   0x2c  <for P2 s0>
+                            - 0x08000588  0x4c8
+
+"P2":                                     0x430
+  P2 s0                       0x20000000   0x2c  <Init block>
+    .data            inited   0x20000000   0x14  system_stm32f0xx.o [1]
+    .data            inited   0x20000014   0x10  main.o [1]
+    .data            inited   0x20000024    0x8  stm32f0_discovery.o [1]
+  .bss               zero     0x2000002c    0x4  main.o [1]
+  CSTACK                      0x20000030  0x400  <Block>
+    CSTACK           uninit   0x20000030  0x400  <Block tail>
+                            - 0x20000430  0x430
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4:
+          0x2000002c   0x4
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x2c:
+          0x0800055c  0x2c
+    1 destination range, total size 0x2c:
+          0x20000000  0x2c
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj: [1]
+    main.o                   148       16       20
+    startup_stm32f0xx.o      264
+    stm32f0_discovery.o      104        8        8
+    stm32f0xx_gpio.o         122
+    stm32f0xx_it.o           106
+    stm32f0xx_rcc.o           24
+    system_stm32f0xx.o       180       20       20
+    ----------------------------------------------
+    Total:                   948       44       48
+
+command line: [2]
+    ----------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                     8
+    low_level_init.o           4
+    ----------------------------------------------
+    Total:                    12
+
+rt6M_tl.a: [4]
+    I32DivModFast.o          174
+    IntDivZer.o                2
+    cexit.o                   10
+    cmain.o                   26
+    copy_init3.o              48
+    cstartup_M.o              12
+    data_init.o               40
+    zero_init3.o              42
+    ----------------------------------------------
+    Total:                   354
+
+shb_l.a: [5]
+    exit.o                    20
+    ----------------------------------------------
+    Total:                    20
+
+    Linker created                     38    1 024
+--------------------------------------------------
+    Grand Total:           1 334       82    1 072
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                  0x080004c9        Code  Gb  cmain.o [4]
+AHBPrescTable          0x20000000  0x10  Data  Gb  system_stm32f0xx.o [1]
+CSTACK$$Base           0x20000030         --   Gb  - Linker created -
+CSTACK$$Limit          0x20000430         --   Gb  - Linker created -
+EXTI0_1_IRQHandler     0x08000449   0x2  Code  Gb  stm32f0xx_it.o [1]
+GPIO_CLK               0x080003d8   0x8  Data  Gb  stm32f0_discovery.o [1]
+GPIO_Init              0x080002fd  0x6a  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_InitStructure     0x20000014   0x8  Data  Gb  main.o [1]
+GPIO_PIN               0x080003d4   0x4  Data  Gb  stm32f0_discovery.o [1]
+GPIO_PORT              0x20000024   0x8  Data  Gb  stm32f0_discovery.o [1]
+GPIO_ReadInputDataBit  0x08000367   0x8  Code  Gb  stm32f0xx_gpio.o [1]
+HardFault_Handler      0x080003e3   0x2  Code  Gb  stm32f0xx_it.o [1]
+NMI_Handler            0x080003e1   0x2  Code  Gb  stm32f0xx_it.o [1]
+PendSV_Handler         0x080003e7   0x2  Code  Gb  stm32f0xx_it.o [1]
+RCC_AHBPeriphClockCmd  0x080002e5  0x14  Code  Gb  stm32f0xx_rcc.o [1]
+Region$$Table$$Base    0x080004a4         --   Gb  - Linker created -
+Region$$Table$$Limit   0x080004c8         --   Gb  - Linker created -
+STM_EVAL_LEDInit       0x08000379  0x36  Code  Gb  stm32f0_discovery.o [1]
+STM_EVAL_LEDOff        0x080003c1  0x10  Code  Gb  stm32f0_discovery.o [1]
+STM_EVAL_LEDOn         0x080003b1  0x10  Code  Gb  stm32f0_discovery.o [1]
+SVC_Handler            0x080003e5   0x2  Code  Gb  stm32f0xx_it.o [1]
+SysTick_Handler        0x080003e9  0x54  Code  Gb  stm32f0xx_it.o [1]
+SystemCoreClock        0x20000010   0x4  Data  Gb  system_stm32f0xx.o [1]
+SystemInit             0x080000c1  0x98  Code  Gb  system_stm32f0xx.o [1]
+Var                    0x2000001c   0x2  Data  Gb  main.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                       0x20001fff         --   Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                       0x20000000         --   Gb  command line/config [2]
+__aeabi_idiv0          0x0800024d        Code  Gb  IntDivZer.o [4]
+__aeabi_uidiv          0x08000175        Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod       0x08000175        Code  Gb  I32DivModFast.o [4]
+__as_entries_start     0xffffffff         --   Gb  command line/config [2]
+__as_table_start       0xffffffff         --   Gb  command line/config [2]
+__cmain                0x080004c9        Code  Gb  cmain.o [4]
+__exit                 0x080004fd  0x14  Code  Gb  exit.o [5]
+__iar_copy_init3       0x0800044b  0x30  Code  Gb  copy_init3.o [4]
+__iar_data_init3       0x0800047d  0x28  Code  Gb  data_init.o [4]
+__iar_program_start    0x08000521        Code  Gb  cstartup_M.o [4]
+__iar_zero_init3       0x08000223  0x2a  Code  Gb  zero_init3.o [4]
+__low_level_init       0x080004e3   0x4  Code  Gb  low_level_init.o [3]
+__vector_table         0x08000000        Data  Gb  startup_stm32f0xx.o [1]
+_call_main             0x080004d5        Code  Gb  cmain.o [4]
+_exit                  0x080004f1        Code  Gb  cexit.o [4]
+_main                  0x080004df        Code  Gb  cmain.o [4]
+c                      0x2000002c   0x4  Data  Gb  main.o [1]
+dim                    0x20000020   0x4  Data  Gb  main.o [1]
+exit                   0x080004e7   0x8  Code  Gb  exit.o [3]
+main                   0x08000251  0x7a  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\srijan\Documents\STMF0\Interrupt to dim lights using two buttons\Project\Peripheral_Examples\EXTI\EWARM\EXTI\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  1 334 bytes of readonly  code memory
+     82 bytes of readonly  data memory
+  1 072 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
